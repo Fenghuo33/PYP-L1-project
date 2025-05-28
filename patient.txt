@@ -1,0 +1,2 @@
+id,name,age,gender,contact,address,medical_history
+P001,tom,18,male,011-37225822,Some house,nothing

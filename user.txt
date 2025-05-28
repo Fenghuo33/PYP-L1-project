@@ -1,0 +1,4 @@
+email,password,id,role
+1@gmail.com,111,U01,doctor
+2@gmail.com,222,U02,patient
+3@gmail.com,333,U03,nurse
