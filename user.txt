@@ -1,4 +1,11 @@
-email,password,id,role
-1@gmail.com,111,U01,doctor
-2@gmail.com,222,U02,patient
-3@gmail.com,333,U03,nurse
+email|password|id|role
+emily.brooks@gmail.com|Sunshine#23|P001|patient
+jacob_lee@hotmail.com|MapleTree92|P002|patient
+sofia.martinez@gmail.com|OceanBreeze!9|P003|patient
+daniel.kim@hotmail.com|BlueSky_11|P004|patient
+mia.thompson@gmail.com|CoffeeBean88|P005|patient
+dr.james.nguyen@gmail.com|HeartCare2024|D001|doctor
+samantha.choi@hotmail.com|Health@Work77|D002|doctor
+linda.b@gmail.com|ShiftNight33|N001|nurse
+ryan.adams@hotmail.com|FirstAid_21|N002|nurse
+claire22@gmail.com|Welcome123!|R001|receptionist
