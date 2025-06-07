@@ -1,4 +1,4 @@
-SEPARATOR = ','
+SEPARATOR = '|'
 
 def append_file(file_name, *args):
     """

@@ -1,0 +1,6 @@
+payment_id|total_price|patient_id|status|payment_date
+PAY001|120.50|P001|paid|05-06-2025
+PAY002|85.00|P002|not paid|
+PAY003|45.75|P003|paid|20-05-2025
+PAY004|200.00|P004|paid|15-05-2025
+PAY005|60.00|P005|not paid|

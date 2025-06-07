@@ -1,2 +1,7 @@
-id,name,age,gender,contact,address,medical_history
-P001,tom,18,male,011-37225822,Some house,nothing
+id|name|DOB|gender|contact|address|medical_history
+P001|Emily Brooks|12-04-1990|female|011-23456789|No 23, Jalan Bunga Raya, Taman Seri Murni, KL|Asthma, Seasonal Allergies
+P002|Jacob Lee|08-11-1985|male|013-4567890|No 7, Jalan Merdeka, Taman Bukit Indah, Shah Alam|Hypertension
+P003|Sofia Martinez|21-06-1992|female|014-5678901|No 88, Jalan Kenanga, Taman Desa Aman, JB|None
+P004|Daniel Kim|17-02-1988|male|016-6789012|No 15, Jalan Sentosa, Bandar Baru, Ipoh|Type 2 Diabetes
+P005|Mia Thompson|03-09-1995|female|017-7890123|No 12, Jalan Melati, Taman Ria, Seremban|Eczema
+

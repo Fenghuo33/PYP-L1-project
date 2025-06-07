@@ -1,0 +1,7 @@
+id|diagnosis|prescriptions|treatment_plans
+P001|Cough|Syrup Paracetamol|Rest Stay hydrated
+P002|High Blood Pressure|Amlodipine|Daily medication Regular checkup
+P003|Flu|Paracetamol Antihistamine|Rest Drink warm fluids
+P004|Diabetes|Metformin|Diet control Monitor sugar levels
+P005|Skin Rash|Antihistamine Cream|Apply cream twice daily Avoid scratching
+

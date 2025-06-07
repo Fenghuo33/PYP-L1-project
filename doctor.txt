@@ -1,0 +1,3 @@
+id|name|phone|available_day|blocked_dates
+D001|James Nguyen|012-3456789|Monday|Tuesday|Thursday|15-05-2025,20-05-2025
+D002|Samantha Choi|013-4567890|Wednesday|Friday|10-06-2025,12-06-2025,25-05-2025
