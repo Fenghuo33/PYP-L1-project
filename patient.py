@@ -107,5 +107,3 @@ def menu(user_id = 'P001'):
                 return
             case _:
                 print("Invalid input")
-
-menu()
