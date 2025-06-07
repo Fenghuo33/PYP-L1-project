@@ -10,13 +10,13 @@ def login():
         "------------------------------\n")
 
         #input email
-        user_email = input("Please enter your email: ")
+        user_email = input("Please enter your email (leave blank to exit): ")
 
         #exit case
         if user_email == '':
-            print("-----------------\n"
+            print("------------------------------\n"
                   "Exiting program\n"
-                  "-----------------\n")
+                  "------------------------------\n")
             break
 
         #validate user email
@@ -59,6 +59,8 @@ def login():
             else:
                 print("WRONG PASSWORD")
                 attempt -= 1
+        else:
+            print("Too many fails, please log in again.")
 
 login()
 
