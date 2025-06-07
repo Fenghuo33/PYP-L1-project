@@ -1,27 +1,41 @@
 import file_utils as util
 
 def view_medical_records(id):
-    result = util.search_in_file("medical_record.txt", id = id)
-    if result:
-        user_id, diagnosis, prescriptions, something = result[0]
+    record = util.search_in_file("medical_record.txt", id = id)
+    if record:
+        user_id, diagnosis, prescriptions, treatment_plan = record[0]
     else:
         print(f'Error: No medical record with id: {id} found, please check with your receptionist')
         return
-    print(f'diagnosis: {diagnosis}, prescriptions: {prescriptions}')
+    print(f'Diagnosis: {diagnosis}, Treatment plan: {treatment_plan}')
+    input("Press Enter to continue...\n")
 
 def view_appointments(id):
-    pass
+    appointments = util.search_in_file("appointments.txt", patient_id = id)
+    if not appointments:
+        print(f'No Appointment with id: {id} found, please check with your receptionist')
+        return
+    print("------------------------------\n"
+          "Your future appointments\n"
+          "------------------------------")
+    count = 1
+    for appointment in appointments:
+        patient_id, doctor_id, date, time = appointment
+        doctor_name = util.search_in_file("doctor.txt", id=doctor_id)[0][1]
+        print(f'{count}. Date: {date}, Time: {time}, Doctor: {doctor_name}')
+        count += 1
+    input("Press Enter to continue...\n")
 
 def update_info(id):
     result = util.search_in_file("patient.txt", id = id)
     if result:
-        user_id, name, age, gender, contact, address, medical_history = result[0]
+        user_id, name, DOB, gender, contact, address, medical_history = result[0]
     else:
         print(f'Error: No patient with id: {id} found, please check with your receptionist')
         return
     while True:
         print(f'1. Name: {name}\n'
-              f'2. Age: {age}\n'
+              f'2. Date of Birth: {DOB}\n'
               f'3. Gender: {gender}\n'
               f'4. Contact: {contact}\n'
               f'5. Address: {address}\n'
@@ -33,8 +47,8 @@ def update_info(id):
                 new_name = input("Enter your name: ")
                 name = new_name
             case '2':
-                new_age = input("Enter your birth year: ")
-                age = new_age
+                new_DOB = input("Enter your birth year: ")
+                DOB = new_DOB
             case '3':
                 new_gender = input("Enter your gender: ")
                 gender = new_gender
@@ -55,11 +69,26 @@ def update_info(id):
 
 
 def view_payment(id):
-    pass
+    payments = util.search_in_file("payment.txt", patient_id = id)
+    if not payments:
+        print(f'Error: No Payment with id: {id} found, please check with your receptionist')
+        return
+    print("------------------------------\n"
+          "Your payment history\n"
+          "------------------------------")
+    count = 1
+    for payment in payments:
+        payment_id, total_price, patient_id, status, payment_date = payment
+        print(f'{count}. Total price: {total_price}, Status: {status}', end = "")
+        print(f', Payment date: {payment_date}') if payment_date else print("")
+        count += 1
+    input("Press Enter to continue...\n")
 
 def menu(user_id = 'P001'):
     while True:
-        choice = input("Enter choose operation\n"
+        choice = input("------------------------------\n"
+                       "Enter choose operation\n"
+                       "------------------------------\n"
                        "1. Access your medical records\n"
                        "2. View upcoming appointments\n"
                        "3. Update personal information\n"
@@ -78,3 +107,5 @@ def menu(user_id = 'P001'):
                 return
             case _:
                 print("Invalid input")
+
+menu()
