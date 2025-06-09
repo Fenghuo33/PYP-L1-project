@@ -33,6 +33,11 @@ def search_in_file(file_name, **kargs):
         for line in file:
             #splits line into a list of data
             data = line.strip().split(SEPARATOR)
+
+            #exclude empty or corrupted lines
+            if len(data) != len(header):
+                continue
+
             # checks for the conditions
             if not kargs or all(column in column_index and data[column_index[column]] == str(target) for column, target in kargs.items()):
                 result.append(data)   # appends the whole row to result
@@ -66,6 +71,11 @@ def update_file(file_name, update_data: dict, target_data: dict):
     for line in orig_lines[1:]:
         #splits the line into data
         data = line.strip().split(SEPARATOR)
+
+        # exclude empty or corrupted lines
+        if len(data) != len(header):
+            continue
+
         #checks the conditions
         if all(target_column in column_index and data[column_index[target_column]] == str(target) for target_column, target in target_data.items()):
             #updates all column that needs an update in that line
